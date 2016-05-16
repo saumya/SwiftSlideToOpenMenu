@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6Mp-y5-vmd">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller Home-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewControllerHome" customModule="SwiftSlideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="6NI-gH-0sP" appends="YES" id="cUX-vy-Nlc"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="Bx8-Po-RPH">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="AFw-g0-Q85">
+                            <connections>
+                                <action selector="openMenu:" destination="BYZ-38-t0r" id="fFg-zM-DMx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="4Sk-1N-9Hu" kind="presentation" identifier="openMenu" id="69B-KQ-wfC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="6NI-gH-0sP">
+                    <rectEdge key="edges" left="YES"/>
+                    <connections>
+                        <action selector="openMenu:" destination="BYZ-38-t0r" id="g0X-Wp-7pp"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="132" y="211"/>
+        </scene>
+        <!--View Controller Menu-->
+        <scene sceneID="Ef0-Pk-foo">
+            <objects>
+                <viewController id="4Sk-1N-9Hu" customClass="ViewControllerMenu" customModule="SwiftSlideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0w9-Fk-uAD"/>
+                        <viewControllerLayoutGuide type="bottom" id="EjZ-lH-Wqq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PxS-wq-zJD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hop-TL-QTJ">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Close"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="316" y="0.0" width="84" height="800"/>
+                                </variation>
+                                <connections>
+                                    <action selector="closeMenu:" destination="4Sk-1N-9Hu" eventType="touchUpInside" id="T1Y-Vn-eKZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="hop-TL-QTJ"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="hop-TL-QTJ"/>
+                            </mask>
+                        </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Vwr-uJ-feC" appends="YES" id="LKn-mQ-U25"/>
+                        </connections>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0wv-vQ-ZTE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Vwr-uJ-feC">
+                    <connections>
+                        <action selector="closeMenu:" destination="4Sk-1N-9Hu" id="ExG-rz-qHW"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="901.5" y="210.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hlc-jA-lrG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6Mp-y5-vmd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IxA-Hd-IVp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="1nF-LJ-GaV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zxM-Zp-Wbe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-593" y="211"/>
+        </scene>
+    </scenes>
+</document>
