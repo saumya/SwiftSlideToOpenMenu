@@ -1,5 +1,5 @@
-Swift Slider Menu
-=================
+Swift Slide-To-Open Menu
+=======================
 
 A slide to open menu made with Swift.
 
